@@ -3,6 +3,8 @@ package src.bank_management_system;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -11,7 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-public class Login extends JFrame {
+public class Login extends JFrame implements ActionListener {
 
     JLabel label1, label2, label3;  //gloablly declare
     JTextField textField2;
@@ -78,6 +80,7 @@ public class Login extends JFrame {
      btn1.setForeground(Color.white);
      btn1.setBackground(Color.black);
      btn1.setBounds(300,300,100,30);
+     btn1.addActionListener(this);
     add(btn1);
 
      btn2= new JButton("CLEAR");
@@ -85,6 +88,7 @@ public class Login extends JFrame {
      btn2.setForeground(Color.white);
      btn2.setBackground(Color.BLACK);
      btn2.setBounds(430,300,100,30);
+     btn2.addActionListener(this);
     add(btn2);
 
 
@@ -93,6 +97,7 @@ public class Login extends JFrame {
      btn3.setForeground(Color.white);
      btn3.setBackground(Color.BLACK);
      btn3.setBounds(300,350,230,30);
+     btn3.addActionListener(this);
     add(btn3);
 
 
@@ -104,11 +109,6 @@ public class Login extends JFrame {
         imgs.setBounds(0,0,850,480);
         add(imgs);
 
-
-     
-
-
-
        //frame layout - bydefault it is null
         setLayout(null);
        
@@ -117,7 +117,26 @@ public class Login extends JFrame {
         setVisible(true);
     }
 
+@Override
+public void actionPerformed(ActionEvent e) {   //this will perform the tasdk for button
+   try{
+    if(e.getSource() == btn1){  //e will see yes btn1 is there and will perform its task 
+   
+    }else if(e.getSource() == btn2){
+        textField2.setText("");
+        passwordField3.setText("");
 
+    }else if(e.getSource() == btn3){
+
+
+    }
+
+   }catch(Exception E){
+    E.printStackTrace(); 
+
+   }
+    
+}
 // main function
     public static void main(String[] args) {
         //objrct
