@@ -222,8 +222,32 @@ public class SignUp extends JFrame implements ActionListener {
   
 @Override
 public void actionPerformed(ActionEvent e) {
-  
-    
+
+  String formno = first;     //from form now we will save the detials 
+  String name  = textName.getText();    //,get to get the name from form 
+  String fname = textFname.getText();
+  String dob = ((JTextField) dateChooser.getDateEditor().getUiComponent()).getText();   // to store dob from form 
+  String gender = null ;  // will be selected on absis of radio button condition below
+    if(r1.isSelected()){
+      gender = "Male";
+    }
+    else if (r2.isSelected()){
+      gender = "Female";
+
+    }
+    String email = textEmail.getText();
+    String marital = null;
+    if(m1.isSelected()){
+      marital = "married";
+    }else if(m2.isSelected()){
+      marital = "unmarried";
+    }else if(m3.isSelected()){
+      marital = "other";
+    }
+    String address =textAdd.getText();
+    String city = textCity.getText();
+    String pin = textPin.getText();
+    String state =textState.getText();
 }
 
    //main function
