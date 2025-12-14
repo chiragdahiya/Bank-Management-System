@@ -12,6 +12,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
@@ -248,6 +249,23 @@ public void actionPerformed(ActionEvent e) {
     String city = textCity.getText();
     String pin = textPin.getText();
     String state =textState.getText();
+
+    try{
+        if(textName.getText().equals("")){
+          JOptionPane.showMessageDialog(null,"Fill all the fields");
+        }else{
+          CN cn1 = new CN();
+
+          //to store data in database
+          String q = "insert into signup values('"+formno+"','"+name+"','"+fname+"', '"+dob+"', '"+gender+"', '"+email+"','"+marital+"','"+address+"','"+city+"','"+pin+"','"+state+"')";
+          cn1.statement.executeUpdate(q);   //to add value into table  use execute update
+          new SignUp2();
+          setVisible(false);
+        }
+
+    }catch( Exception E){
+      E.printStackTrace();
+    }
 }
 
    //main function
