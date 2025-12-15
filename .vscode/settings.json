@@ -1,0 +1,10 @@
+{
+    "java.project.sourcePaths": [
+        "."
+    ],
+    "java.project.referencedLibraries": [
+        "lib\\mysql-connector-java-8.0.28.jar",
+        "e:\\user\\Documents\\GitHub\\Bank-Management-System\\lib\\jcalendar-tz-1.3.3-4.jar",
+        "e:\\user\\Documents\\GitHub\\Bank-Management-System\\lib\\mysql-connector-java-8.0.28.jar"
+    ]
+}

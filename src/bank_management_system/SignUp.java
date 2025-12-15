@@ -259,7 +259,7 @@ public void actionPerformed(ActionEvent e) {
           //to store data in database
           String q = "insert into signup values('"+formno+"','"+name+"','"+fname+"', '"+dob+"', '"+gender+"', '"+email+"','"+marital+"','"+address+"','"+city+"','"+pin+"','"+state+"')";
           cn1.statement.executeUpdate(q);   //to add value into table  use execute update
-          new SignUp2();
+          new SignUp2(first);
           setVisible(false);
         }
 
